@@ -1,17 +1,24 @@
 package ru.winzdoor.onlineshoppingbackend.dto;
 
+import javax.persistence.*;
+
+@Entity
 public class Category {
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
     private String name;
     private String description;
+    @Column(name = "image_url")
     private String imageURL;
+    @Column(name="is_active")
     private boolean active = true;
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -45,5 +52,16 @@ public class Category {
 
     public void setActive(boolean active) {
         this.active = active;
+    }
+
+    @Override
+    public String toString() {
+        return "Category{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", imageURL='" + imageURL + '\'' +
+                ", active=" + active +
+                '}';
     }
 }
