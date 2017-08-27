@@ -7,8 +7,9 @@ $(function () {
         case 'Contact':
             $('#contact').addClass('active');
             break;
-        case 'Home':
-            $('#home').addClass('active');
+        default:
+            $('#listProducts').addClass('active');
+            $('#a_'+menu).addClass('active');
             break;
     }
 })
