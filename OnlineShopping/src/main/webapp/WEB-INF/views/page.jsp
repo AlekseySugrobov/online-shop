@@ -20,6 +20,7 @@
     <title>Online Shopping - ${title}</title>
     <script>
         window.menu = '${title}';
+        window.contextRoot = '${contextRoot}';
     </script>
     <!-- Bootstrap core CSS -->
     <link href="${css}/bootstrap.min.css" rel="stylesheet">
@@ -28,6 +29,8 @@
     <link href="${css}/shop-homepage.css" rel="stylesheet">
 
     <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
+
+    <link href="${css}/dataTables.bootstrap.css">
 
 </head>
 
@@ -49,10 +52,14 @@
         </c:if>
     </div>
     <%@include file="./shared/footer.jsp"%>
+    <!-- jquery -->
     <script src="${js}/jquery.min.js"></script>
     <script src="${js}/popper.min.js"></script>
     <script src="${js}/bootstrap.min.js"></script>
     <script src="${js}/site.js"></script>
+    <!-- datatable js -->
+    <script src="${js}/jquery.dataTables.min.js"></script>
+    <script src="${js}/dataTables.bootstrap.js"></script>
 </div>
 
 </body>

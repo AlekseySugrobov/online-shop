@@ -30,3 +30,8 @@ body {
 footer{
     margin: 0;
 }
+
+.dataTableImg{
+    width: 100px;
+    height: 100px;
+}
